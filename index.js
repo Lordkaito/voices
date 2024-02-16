@@ -14,11 +14,7 @@ app.use(express.json());
 app.post("/audio", async (req, res) => {
   const randomString = generateRandomString();
   let { message, model } = req.body;
-  const request = await audioRequest(
-    model = "TM:1hj3fftb6yrb",
-    message = "Hola, soy chiquito",
-    randomString
-  )
+  const request = await audioRequest(model, message, randomString)
     .then(async (res) => {
       const result = await pollAudioRequest(res.inferenceJobToken);
       return result;
