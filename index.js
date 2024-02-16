@@ -15,8 +15,8 @@ app.post("/audio", async (req, res) => {
   const randomString = generateRandomString();
   let { message, model } = req.body;
   const request = await audioRequest(
-    (model = "TM:1hj3fftb6yrb"),
-    (message = "Hola, soy chiquito"),
+    model = "TM:1hj3fftb6yrb",
+    message = "Hola, soy chiquito",
     randomString
   )
     .then(async (res) => {
