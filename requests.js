@@ -1,7 +1,13 @@
-const voiceListUrl = "https://api.fakeyou.com/tts/list";
-const audioRequestUrl = "https://api.fakeyou.com/tts/inference";
-const pollAudioRequestUrl = "https://api.fakeyou.com/tts/job";
-const audioStorageUrl = "https://storage.googleapis.com/vocodes-public";
+// const voiceListUrl = "https://api.fakeyou.com/tts/list";
+// const audioRequestUrl = "https://api.fakeyou.com/tts/inference";
+// const pollAudioRequestUrl = "https://api.fakeyou.com/tts/job";
+// const audioStorageUrl = "https://storage.googleapis.com/vocodes-public";
+const voiceListUrl = process.env.VOICE_LIST_URL;
+const audioRequestUrl = process.env.AUDIO_REQUEST_URL;
+const pollAudioRequestUrl = process.env.POLL_AUDIO_URL;
+const audioStorageUrl = process.env.AUDIO_STORAGE_URL;
+
+console.log(voiceListUrl);
 
 function generateRandomString() {
   const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
