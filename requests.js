@@ -88,9 +88,7 @@ async function audioRequest(
   return response;
 }
 
-async function pollAudioRequest(
-  inferenceJobToken = "jinf_gvpdmyjr4kcvmmaev6z5380xxfn"
-) {
+async function pollAudioRequest(inferenceJobToken) {
   const response = await fetch(`${pollAudioRequestUrl}/${inferenceJobToken}`, {
     method: "GET",
     headers: {
