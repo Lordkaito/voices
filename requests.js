@@ -18,10 +18,6 @@ function generateRandomString() {
   }
   return randomString;
 }
-
-const randomString = generateRandomString();
-console.log(randomString);
-
 // window.addEventListener("onEventReceived", function (obj) {
 //   if (obj.detail.event.value === "reset") {
 //     clearApiData();

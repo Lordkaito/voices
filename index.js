@@ -12,7 +12,6 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/audio", async (req, res) => {
-  console.log(req.body);
   const randomString = generateRandomString();
   let { message, model } = req.body;
   const request = await audioRequest(
