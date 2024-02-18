@@ -18,13 +18,17 @@ function generateRandomString() {
 async function getVoiceList() {
   const response = await fetch(voiceListUrl);
   const data = await response.json();
+  const chiquita = data.models.filter((voice) => voice.title === "Chiquito de la Calzada. (Castillian Spanish.)");
+  console.log(chiquita);
   const titles = data.models.map((voice) => voice.title);
   return data;
 }
 
+  // getVoiceList();
+
 async function audioRequest(
-  model,
-  text,
+  model = "TM:1hj3fftb6yrb",
+  text = "Texto de prueba",
   randomId = randomString
 ) {
   const dataToSend = {
